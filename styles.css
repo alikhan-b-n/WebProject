@@ -2,29 +2,14 @@
   background-color: #FFB273;
 }
 .margin{
-  margin: 0 15%;
+  margin-left: 15;
 }
- .navbar{
-   margin: 0;
-   padding: 0;
-}
-.navbar a{
-  display: block;
-  background-color: #A64B00;
-  color: red;
-  text-decoration: none;
-  font-size: xx-large;
-  width: 200px;
-  text-align: center;
-  margin: 0;
-  padding: 10px;
-}
-.navbar a:hover {
-  background-color: #FFB273;
-  color: white;
+.carousel-control-prev, .carousel-control-next {
+    height: 70%;
+
 }
 .bg-custom {
-  background-color: #A64D00
+  background-color: #B3541E;
 }
 .carousel-item {
   height:32rem;
@@ -101,8 +86,8 @@
     font-size: 16px;
     cursor: pointer;
     text-align: center;
-    position: fixed; /* Fixed/sticky position */
-    bottom: 20px; /* Place the button at the bottom of the page */
+    position: fixed;
+    bottom: 20px;
 
 }
 
@@ -119,14 +104,14 @@
   right: 16px;
   font-size: 18px;
 }
-.centerimg {
+.centering {
   position: absolute;
   top: 23%;
   width: 95%;
   text-align: center;
   font-size: 18px;
 }
-.centerimgdown {
+.centeringdown {
     position: absolute;
     top: 50%;
     width: 95%;
@@ -148,21 +133,4 @@ input[type=text]:focus, input[type=password]:focus {
 hr {
   border: 1px solid #f1f1f1;
   margin-bottom: 25px;
-}
-.registration {
-  background-color: #4CAF50;
-  color: white;
-  padding: 16px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  opacity: 0.9;
-}
-.registration:hover {
-  opacity:1;
-}
-.signin {
-  background-color: #f1f1f1;
-  text-align: center;
 }
