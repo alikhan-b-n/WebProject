@@ -1,24 +1,121 @@
-.main-bg{
-  background-color: #FFB273;
+:root{
+  --color1:#65A700;
+  --color2:#CACACA;
+  --color3:#54E700;
+  --color4:#666;
 }
-.margin{
-  margin-left: 15;
-}
-.carousel-control-prev, .carousel-control-next {
-    height: 70%;
 
+#THEHEADER{
+    display: block;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 5px;
+    padding-bottom: 150px;
+    background-color: white;
 }
-.bg-custom {
-  background-color: #B3541E;
+
+#header{
+  display:flex;
+  align-items: center; 
+  justify-content:center;
 }
-.carousel-item {
-  height:32rem;
-  background:#777;
-  color:white;
+
+.img-logo{
+  max-width: 15%;
+  border: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.wholeMenu{
+  display:flex;
   position: relative;
-  background-position: center;
-  background-size: cover;
+  top: 50px; 
 }
+
+.menu a{
+  color: #7B940F;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.menu li{
+  list-style: none;
+}
+
+.menu a:hover{
+    color: #54E700;
+}
+
+.btn{
+    position: absolute;
+    z-index: 1;
+    width: 2rem;
+    height: 3rem;
+    right: 0;
+    /*opacity: 0;*/
+    border: none;
+    background: transparent;
+    margin-right: 2rem;
+}
+
+.wholeMenu{
+    position: relative;
+}
+
+@media (max-width:1000px){
+      
+      .wholeMenu{
+          position: fixed;
+          inset: 0 0 0 30%;
+          flex-direction: column;
+          padding-left: 50px;
+          padding-top: 100px;
+          transform: translateX(100%);
+          transition: transform 1s ease-out;
+      }
+
+      .wholeMenu[data-visible="true"]{
+          transform: translate(0%);
+      }
+
+      .btn::after{
+          content:"";
+          width: 2rem;
+          height: .3rem;
+          position: absolute;
+          background:#65A700;
+      }
+
+      .btn::before{
+          content:"";
+          width: 2rem;
+          height: .3rem;
+          position: absolute;
+          background:#65A700;
+          margin-top: .5rem;
+      }
+
+      .line{
+          width: 0% !important;
+      }
+}
+
+.line{
+    background-color: var(--color2);
+    width: 100%;
+    height: 2px;
+    position: fixed;
+    top: 190px;
+}
+
+
+
+
 .container-carousel {
   position: absolute;
   bottom:0;
@@ -26,6 +123,7 @@
   left:0;
   padding-bottom:50px;
 }
+
 .overlay-image {
   position: absolute;
   bottom:0;
@@ -33,104 +131,38 @@
   left:0;
   top:0;
   background-position: center;
-  background-size: cover;
+  background-size: 100%;
   opacity:0.7;
+  
 }
-.topnav {
-    background-color: #333;
-    overflow: hidden;
-}
-.topnav a {
-    float: right;
-    color: #f2f2f2;
-    padding: 16px 50px;
-    text-decoration: none;
-    font-size: 17px;
-}
-.topnav a:hover {
-    background-color: #ddd;
-    color: black;
-}
-.topnav a.active {
-    background-color: #4CAF50;
-    color: white;
-}
-.logo {
-  color: #F64A46;
-  font-family: sans-serif;
-  font-size: 30px;
-  float: left;
-  padding: 8px 50px;
-}
-.container {
-  padding: 16px;
-}
-.topright {
-  position: absolute;
-  top: 60px;
-  right: 100px;
-  font-size: 18px;
-}
-.bottomleft {
-  position: fixed;
-  bottom: 250px;
-  left: 16px;
-  font-size: 18px;
-}
-.block {
-    display: block;
-    width: 100%;
-    border: none;
-    background-color: #04AA6D;
-    padding: 14px 28px;
-    font-size: 16px;
-    cursor: pointer;
-    text-align: center;
-    position: fixed;
-    bottom: 20px;
+
+@media(max-width:1000px){
+  #first{
+      width: 100%;
+  }
 
 }
 
-.p {
-    text-align: justify;
-    font-size: 25px;
+.carousel-item {
+  height:10rem;
+  background:#777;
+  color:white;
+  position: relative;
+  background-position: center;
+  background-size: 100%;
+  
 }
-.centerami{
-    text-align: center;
+
+.carousel-control-prev, .carousel-control-next {
+  height: 70%;
+
 }
-.bottomright {
-  position: absolute;
-  bottom: 8px;
-  right: 16px;
-  font-size: 18px;
+
+.products{
+  padding-top: 100px;
+  padding-bottom:100px;
 }
-.centering {
-  position: absolute;
-  top: 23%;
-  width: 95%;
-  text-align: center;
-  font-size: 18px;
-}
-.centeringdown {
-    position: absolute;
-    top: 50%;
-    width: 95%;
-    text-align: center;
-    font-size: 18px;
-}
-input[type=text], input[type=password] {
-  width: 800px;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  display: inline-block;
-  border: none;
-  background: #f1f1f1;
-}
-input[type=text]:focus, input[type=password]:focus {
-  background-color: #ddd;
-  outline: none;
-}
-hr {
-  border: 1px solid #f1f1f1;
-  margin-bottom: 25px;
+
+body{
+  margin:0cm;
 }
